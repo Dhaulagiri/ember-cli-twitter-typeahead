@@ -71,17 +71,17 @@ export default Ember.TextField.extend({
           if (this._filterContent(object.query).length){
             return '';
           }
-          return '<span class="tt-suggestion enter-suggest">Press "Enter" to create a new user.</span>';
+          return '<span class="tt-suggestion enter-suggest">Footer</span>';
         } else {
-          return '<span class="tt-suggestion enter-suggest">Enter an email address and hit enter to create a new user.';
+          return '<span class="tt-suggestion enter-suggest">Footer</span>';
         }
       }.bind(this),
       empty: function(object){
         var query = object.query;
         if (this._validateEmail(query)){
-          return "<span class='tt-suggestion enter-suggest'>Press Enter to create a new user.</span>";
+          return "<span class='tt-suggestion enter-suggest'>Empty</span>";
         } else {
-          return "<span class='tt-suggestion enter-suggest'>Enter an email address and hit enter to create a new user.</span>";
+          return "<span class='tt-suggestion enter-suggest'>Empty</span>";
         }
       }.bind(this)
     }
