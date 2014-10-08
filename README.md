@@ -1,4 +1,4 @@
-# Fs-ember-cli-typeahead
+# ember-cli-twitter-typeahead
 
 This README outlines the details of collaborating on this Ember application.
 
