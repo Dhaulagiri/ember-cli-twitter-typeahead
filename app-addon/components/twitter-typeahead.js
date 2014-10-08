@@ -3,7 +3,7 @@ import Ember from "ember";
 /**
  * Usage:
  * 
- * {{fs-typeahead
+ * {{twitter-typeahead
  * 
  * filterContent=filterContentFn
  * displayKey="somePropertyToDisplayStuff"
