@@ -57,8 +57,7 @@ export default Ember.TextField.extend({
     }.bind(this),
     source: function(query, cb){
       var content = this.get('content');
-      var valueKey = this.get('valueToken') || '';
-      if (!query || query == '*'){
+      if (!query || query === '*'){
         return cb(content);
       }
       cb(this._filterContent(query));
@@ -85,6 +84,7 @@ export default Ember.TextField.extend({
         }
       }.bind(this)
     }
+    /* jshint unused:false */
     }).on('typeahead:selected typeahead:autocompleted', Ember.run.bind(this, function(e, obj, dataSet){
       this.set('selection', obj);
     }));
