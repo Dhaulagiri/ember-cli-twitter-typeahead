@@ -1,8 +1,9 @@
 # ember-cli-twitter-typeahead
 
-This README outlines the details of collaborating on this Ember application.
-
-A short introduction of this app could easily go here.
+This is an ember wrapper for Twitter's JQuery Typeahead. It's packaged as a
+simple ember cli add on. All you have to do is use `npm install --save
+ember-cli-twitter-typeahead` and you'll be able to use the typeahead helper in
+your app.
 
 ## Prerequisites
 
@@ -10,42 +11,32 @@ You will need the following things properly installed on your computer.
 
 * [Git](http://git-scm.com/)
 * [Node.js](http://nodejs.org/) (with NPM) and [Bower](http://bower.io/)
+* [Twitter Typeahead](https://github.com/twitter/typeahead.js/) via Bower
+
+## Usage
+
+To use this in your app, simply use:
+`{{twitter-typeahead
+filterContent=filterContentFn
+displayKey="propertyToDisplay"
+valueKey="propertyForValue"
+footerTemplate=handlebarsFooterTemplate
+emptyTemplate=handlebarsEmptyTemplate
+on-select-without-match="ActionToRunWhenEnterIsHitWithoutAMatch"
+}}`
+
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
-
-## Running / Development
-
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
+* `npm install --save ember-cli-twitter-typeahead`
 
 ### Running Tests
 
+To develop and test locally, simply clone the repository and run:
 * `ember test`
 * `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 
 * ember: http://emberjs.com/
 * ember-cli: http://www.ember-cli.com/
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
