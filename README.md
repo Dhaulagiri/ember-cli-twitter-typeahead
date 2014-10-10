@@ -16,14 +16,15 @@ You will need the following things properly installed on your computer.
 ## Usage
 
 To use this in your app, simply use:
-`{{twitter-typeahead
+```javascript
+{{twitter-typeahead
 filterContent=filterContentFn
 displayKey="propertyToDisplay"
 valueKey="propertyForValue"
 footerTemplate=handlebarsFooterTemplate
 emptyTemplate=handlebarsEmptyTemplate
 on-select-without-match="ActionToRunWhenEnterIsHitWithoutAMatch"
-}}`
+}}```
 
 
 ## Installation
