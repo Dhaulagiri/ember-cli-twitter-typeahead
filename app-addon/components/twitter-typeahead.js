@@ -52,7 +52,6 @@ export default Ember.TextField.extend({
     }, {
       minLength: 0,
     displayKey: function(object){
-      console.log(Ember.get(object, this.get("displayKey")));
       return Ember.get(object, this.get('displayKey'));
     }.bind(this),
     source: function(query, cb){
