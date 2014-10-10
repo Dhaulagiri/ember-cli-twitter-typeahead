@@ -24,7 +24,8 @@ valueKey="propertyForValue"
 footerTemplate=handlebarsFooterTemplate
 emptyTemplate=handlebarsEmptyTemplate
 on-select-without-match="ActionToRunWhenEnterIsHitWithoutAMatch"
-}}```
+}}
+```
 
 
 ## Installation
