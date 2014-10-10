@@ -22,11 +22,6 @@ export default Ember.TextField.extend({
 
     classNames: [ 'form-control' ],
 
-  _validateEmail: function(email){
-    var emailRegex = /\S+@\S+\.\S+/;
-    return !!(email && emailRegex.test(email));
-  },
-
   keyUp: function(event){
     if (event.which === 13){
       var $dropdownMenu = this.$().siblings('.tt-dropdown-menu');
