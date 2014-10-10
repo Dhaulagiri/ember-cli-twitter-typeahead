@@ -11,7 +11,7 @@ module('integration:typeahead', {
 test('shows the typeahead input box', function() {
   expect(1);
 
-  visit("/");
+  visit('/');
 
   andThen(function() {
     ok($(".tt-input").length);
