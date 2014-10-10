@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'fs-ember-cli-typeahead',
+    modulePrefix: 'ember-cli-twitter-typeahead',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
