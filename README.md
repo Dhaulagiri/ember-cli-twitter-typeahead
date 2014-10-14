@@ -18,6 +18,7 @@ You will need the following things properly installed on your computer.
 To use this in your app, simply use:
 ```javascript
 {{twitter-typeahead
+content=arrayOfDataForTypeahead
 filterContent=filterContentFn
 displayKey="propertyToDisplay"
 valueKey="propertyForValue"

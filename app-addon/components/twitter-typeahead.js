@@ -4,7 +4,8 @@ import Ember from "ember";
  * Usage:
  * 
  * {{twitter-typeahead
- * 
+ *
+ * content=arrayOfDataForTypeahead
  * filterContent=filterContentFn
  * displayKey="somePropertyToDisplayStuff"
  * valueToken="somePropertyToFilterOn"
