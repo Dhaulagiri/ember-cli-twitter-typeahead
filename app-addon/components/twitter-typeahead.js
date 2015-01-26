@@ -2,7 +2,7 @@ import Ember from "ember";
 
 /**
  * Usage:
- * 
+ *
  * {{twitter-typeahead
  *
  * content=arrayOfDataForTypeahead
@@ -12,7 +12,7 @@ import Ember from "ember";
  * footerTemplate=somePropertyThatMapsToHandlebarsFunction
  * emptyTemplate=somePropertyThatMapsToHandlebarsFunction
  * on-select-without-match="someActionNameToHandleWhenThereIsn'tAMatchInTheList"
- * 
+ *
  * }}
  */
 
@@ -35,7 +35,7 @@ export default Ember.TextField.extend({
     }
   },
 
-  _filterContent: function(query){
+  _filterContent: function(query) {
     var regex = new RegExp(query, 'i');
     var valueKey = this.get('valueToken');
     return this.get('content').filter(function(thing){
