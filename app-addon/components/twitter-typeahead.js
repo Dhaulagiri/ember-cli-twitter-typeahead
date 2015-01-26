@@ -21,7 +21,7 @@ export default Ember.TextField.extend({
     Ember.run.scheduleOnce('afterRender', this, '_initializeTypeahead');
   }).on('didInsertElement'),
 
-    classNames: [ 'form-control' ],
+  classNames: [ 'form-control' ],
 
   keyUp: function(event){
     if (event.which === 13){
@@ -47,39 +47,29 @@ export default Ember.TextField.extend({
     this.$().typeahead({
     }, {
       minLength: 0,
-    displayKey: function(object){
-      return Ember.get(object, this.get('displayKey'));
-    }.bind(this),
-    source: function(query, cb){
-      var content = this.get('content');
-      if (!query || query === '*'){
-        return cb(content);
-      }
-      cb(this._filterContent(query));
-    }.bind(this),
-    templates: {
-      footer: function(object){
-        if (object.isEmpty) {
-          return '';
-        } else if(this._validateEmail(object.query)){
-          if (this._filterContent(object.query).length){
-            return '';
-          }
-          return '<span class="tt-suggestion enter-suggest">Footer</span>';
-        } else {
-          return '<span class="tt-suggestion enter-suggest">Footer</span>';
-        }
+      displayKey: function(object){
+        return Ember.get(object, this.get('displayKey'));
       }.bind(this),
-      empty: function(object){
-        var query = object.query;
-        if (this._validateEmail(query)){
-          return "<span class='tt-suggestion enter-suggest'>Empty</span>";
-        } else {
-          return "<span class='tt-suggestion enter-suggest'>Empty</span>";
+      source: function(query, cb){
+        var content = this.get('content');
+        if (!query || query === '*'){
+          return cb(content);
         }
-      }.bind(this)
-    }
-    /* jshint unused:false */
+        cb(this._filterContent(query));
+      }.bind(this),
+      templates: {
+        footer: function(object){
+          if (object.isEmpty) {
+            return '';
+          } else {
+            return '<span class="tt-suggestion enter-suggest">Footer</span>';
+          }
+        }.bind(this),
+        empty: function() {
+          return "<span class='tt-suggestion enter-suggest'>Empty</span>";
+        }.bind(this)
+      }
+      /* jshint unused:false */
     }).on('typeahead:selected typeahead:autocompleted', Ember.run.bind(this, function(e, obj, dataSet){
       this.set('selection', obj);
     }));
