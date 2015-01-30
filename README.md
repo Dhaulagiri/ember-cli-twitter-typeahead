@@ -26,7 +26,7 @@ To use this in your app, simply use:
 content=arrayOfDataForTypeahead
 filterContent=filterContentFn
 displayKey="propertyToDisplay"
-valueKey="propertyForValue"
+valueToken="propertyForValue"
 footerTemplate=handlebarsFooterTemplate
 emptyTemplate=handlebarsEmptyTemplate
 on-select-without-match="ActionToRunWhenEnterIsHitWithoutAMatch"
