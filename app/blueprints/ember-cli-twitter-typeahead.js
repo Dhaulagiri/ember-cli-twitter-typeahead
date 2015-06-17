@@ -1,0 +1,1 @@
+export { default } from 'ember-cli-twitter-typeahead/blueprints/ember-cli-twitter-typeahead';

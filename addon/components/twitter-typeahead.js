@@ -17,9 +17,9 @@ import Ember from "ember";
  */
 
 export default Ember.TextField.extend({
-  intitializeTypeahead: Ember.observer(function(){
+  intitializeTypeahead: Ember.on('didInsertElement', function(){
     Ember.run.scheduleOnce('afterRender', this, '_initializeTypeahead');
-  }).on('didInsertElement'),
+  }),
 
   classNames: [ 'form-control' ],
 
@@ -110,7 +110,7 @@ export default Ember.TextField.extend({
     }
   },
 
-  destroyTypeahead: Ember.observer(function(){
+  destroyTypeahead: Ember.on('willDestroyElement', function(){
     this.$().typeahead('destroy');
-  }).on('willDestroyElement')
+  })
 });
