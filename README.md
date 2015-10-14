@@ -1,6 +1,6 @@
 # ember-cli-twitter-typeahead
 
-[![Build Status](https://travis-ci.org/thefrontside/ember-cli-twitter-typeahead.png?branch=master)](https://travis-ci.org/thefrontside/ember-cli-twitter-typeahead)
+[![Build Status](https://travis-ci.org/Dhaulagiri/ember-cli-twitter-typeahead.png?branch=master)](https://travis-ci.org/Dhaulagiri/ember-cli-twitter-typeahead)
 [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-twitter-typeahead.svg)](http://emberobserver.com/addons/ember-cli-twitter-typeahead)
 
 This is an ember wrapper for Twitter's JQuery Typeahead. It's packaged as a
