@@ -4,8 +4,7 @@
 [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-twitter-typeahead.svg)](http://emberobserver.com/addons/ember-cli-twitter-typeahead)
 
 This is an ember wrapper for Twitter's JQuery Typeahead. It's packaged as a
-simple ember cli add on. All you have to do is use `npm install --save
-ember-cli-twitter-typeahead` and you'll be able to use the typeahead helper in
+simple ember cli add on. All you have to do is use `ember install ember-cli-twitter-typeahead` and you'll be able to use the typeahead helper in
 your ember-cli app.
 
 ## Prerequisites
