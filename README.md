@@ -26,6 +26,7 @@ To use this in your app, simply use:
   valueToken="propertyForValue"
   footerTemplate=handlebarsFooterTemplate
   emptyTemplate=handlebarsEmptyTemplate
+  onSelectAction="ActionToRunWhenItemIsSelected"
   on-select-without-match="ActionToRunWhenEnterIsHitWithoutAMatch"
 }}
 ```

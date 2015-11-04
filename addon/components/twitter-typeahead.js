@@ -79,6 +79,11 @@ export default Ember.TextField.extend({
       /* jshint unused:false */
     }).on('typeahead:selected typeahead:autocompleted', run.bind(this, (e, obj, dataSet) => {
       this.set('selection', obj);
+
+      let name = this.get('selection.name');
+      if (name) {
+        this.sendAction('onSelectAction', name);
+      }
     }));
   },
 
