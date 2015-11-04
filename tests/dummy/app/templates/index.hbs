@@ -1,2 +1,7 @@
 Typeahead Component Test:
-{{twitter-typeahead content=model.typeaheadContent displayKey='name' valueToken='value' filterContent=model.filterContent}}
+{{twitter-typeahead
+  content=model.typeaheadContent
+  displayKey='name'
+  valueToken='value'
+  filterContent=model.filterContent
+  onSelectAction="addSelectedItem"}}
