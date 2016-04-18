@@ -118,7 +118,10 @@ export default Ember.TextField.extend({
     let typeahead;
     if (!this.$().val()) {
       typeahead = this.$().data('ttTypeahead');
-      typeahead.dropdown.update(this.$().val());
+
+      // support older typeahead.js versions
+      const { menu, dropdown } = typeahead;
+      (menu || dropdown).update(this.$().val());
     }
   },
 
