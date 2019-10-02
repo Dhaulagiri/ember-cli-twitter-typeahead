@@ -32,12 +32,12 @@ export default Ember.TextField.extend({
 
   keyUp(event) {
     if (event.which === 13) {
-      const $dropdownMenu = this.$().siblings('.tt-dropdown-menu');
+      const $dropdownMenu = this.element.addEventListener('.tt-dropdown-menu');
       const $suggestions = $dropdownMenu.find('.tt-suggestion:not(.enter-suggest)');
       if ($suggestions.length) {
         $suggestions.first().click();
       } else {
-        this.sendAction('on-select-without-match', this, this.$().val());
+        this.sendAction('on-select-without-match', this, this.element.addEventListener());
       }
     }
   },
@@ -51,7 +51,7 @@ export default Ember.TextField.extend({
   },
 
   _initializeTypeahead() {
-    this.$().typeahead({
+    this.element.addEventListener({
     }, {
       minLength: 0,
       displayKey: run.bind(this, (object) => {
@@ -88,7 +88,7 @@ export default Ember.TextField.extend({
   },
 
   focusOut() {
-    const query = this.$().typeahead('val');
+    const query = this.element.addEventListener('val');
     const results = this._filterContent(query);
     if ($.trim(query).length) {
       if (results.length) {
@@ -106,24 +106,24 @@ export default Ember.TextField.extend({
   setSelectionValue() {
     const selection = this.get('selection');
     if (selection) {
-      this.$().typeahead('val', get(selection, this.get('displayKey')));
+      this.element.addEventListener('val', get(selection, this.get('displayKey')));
     }
   },
 
   close() {
-    this.$().typeahead('close');
+    this.element.addEventListener('close');
   },
 
   focusIn() {
     let typeahead;
-    if (!this.$().val()) {
-      typeahead = this.$().data('ttTypeahead');
-      typeahead.dropdown.update(this.$().val());
+    if (!this.element.addEventListener()) {
+      typeahead = this.element.addEventListener('ttTypeahead');
+      typeahead.dropdown.update(this.element.addEventListener());
     }
   },
 
   willDestroyElement() {
-    this.$().off('typeahead:selected typeahead:autocompleted');
-    this.$().typeahead('destroy');
+    this.element.addEventListener('typeahead:selected typeahead:autocompleted');
+    this.element.addEventListener('destroy');
   }
 });
